@@ -1,0 +1,13 @@
+[Unit]
+Description=CIFS Share from fs01
+After=network-online.target
+
+[Mount]
+What=//s1-fs01/Share/
+Where=/mnt/smb
+Type=cifs
+Options=rw,vers=2.1,credentials=/home/jaels/.creds/ppl33-35.com,file_mode=0666,dir_mode=0777
+
+[Install]
+WantedBy=multi-user.target
+
