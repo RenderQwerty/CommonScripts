@@ -4,7 +4,7 @@ After=network-online.target
 
 [Mount]
 What=//s1-fs01/Share/
-Where=/mnt/smb
+Where=/home/jaels/mnt
 Type=cifs
 Options=rw,vers=2.1,credentials=/home/jaels/.creds/ppl33-35.com,file_mode=0666,dir_mode=0777
 

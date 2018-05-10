@@ -1,0 +1,13 @@
+[Unit]
+Description=ISO Share from vm02
+After=network-online.target
+
+[Mount]
+What=//s1-vm02/e$/ISO/
+Where=/mnt/vm02
+Type=cifs
+Options=rw,vers=2.1,credentials=/home/jaels/.creds/vm02,file_mode=0666,dir_mode=0777
+
+[Install]
+WantedBy=multi-user.target
+
