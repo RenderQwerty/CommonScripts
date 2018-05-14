@@ -1,0 +1,2 @@
+#pattern  filter=crypt diff=crypt
+.my.cnf	filter=crypt diff=crypt
