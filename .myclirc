@@ -1,0 +1,11 @@
+[main]
+smart_completion = True
+multi_line = False
+destructive_warning = True
+log_file = ~/.mycli.log
+log_level = ERROR
+timing = True
+table_format = ascii
+syntax_style = default
+prompt = '\t \u@\h:\d> '
+less_chatty = False
