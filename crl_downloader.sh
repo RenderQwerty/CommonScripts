@@ -1,7 +1,7 @@
 #!/bin/bash
 
-ROOTCA=(https://acskidd.gov.ua/crls http://ca.ksystems.com.ua/crls https://ca.informjust.ua/crls http://csk.uz.gov.ua/crls)
-TARGET=/opt/opcis/CA
+ROOTCA=(https://acskidd.gov.ua/crls http://ca.ksystems.com.ua/crls https://ca.informjust.ua/crls http://csk.uz.gov.ua/crls http://acsk.dpsu.gov.ua/crls)
+TARGET=$HOME/work/ssltest/ca/
 
 cd $TARGET
 for CA in "${ROOTCA[@]}"
@@ -12,6 +12,4 @@ do
                 curl -s -O $LINK
         done
 done
-
-find $TARGET -name "*.crl" -mmin -5 -exec chown opcis:sftponly {} \;
 
